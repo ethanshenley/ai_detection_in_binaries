@@ -1,0 +1,27 @@
+__pycache__
+.env
+[project]
+name = "ai_detection_in_binaries"
+version = "0.1.0"
+description = "AI Model Detection in Binary Executables Demo"
+authors = [
+    {name = "Ethan Henley", email = "ethan.henley@techolution.com"},
+]
+dependencies = [
+    "capstone>=4.0.2",
+    "networkx>=2.8.4",
+    "numpy>=1.21.0",
+    "fastapi>=0.68.0",
+    "uvicorn>=0.15.0",
+    "pydantic>=1.8.2",
+    "pytest>=6.2.5",
+]
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
